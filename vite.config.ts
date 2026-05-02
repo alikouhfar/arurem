@@ -15,17 +15,6 @@ export default defineConfig({
     },
   },
 
-  server: {
-    port: 8080,
-    strictPort: true,
-    host: '0.0.0.0',
-  },
-
-  preview: {
-    port: 8080,
-    strictPort: true,
-  },
-
   logLevel: 'info',
   optimizeDeps: { include: ['react', 'react-dom'] },
 
