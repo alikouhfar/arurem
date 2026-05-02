@@ -16,7 +16,7 @@ export const PurchaseGridCard: FC<PurchaseGridCardProps> = (props) => {
       exit={{ opacity: 0, scale: 0.95 }}
       className="group hover:shadow-gold/5 hover:border-gold/30 relative flex h-full flex-col rounded-[2rem] border border-slate-200 bg-white p-8 transition-all duration-300 hover:shadow-xl"
     >
-      <div className="mb-8 min-w-0 flex-1 text-center sm:text-left">
+      <div className="mb-8 min-w-0 flex-1 text-left">
         <div className="flex-1">
           <h4 className="font-display truncate text-2xl font-extrabold tracking-tight text-slate-950">
             {purchase.sellerName}
@@ -54,7 +54,7 @@ export const PurchaseGridCard: FC<PurchaseGridCardProps> = (props) => {
         </div>
       </div>
 
-      <div className="absolute top-6 right-6 flex items-center gap-1">
+      <div className="absolute top-6 right-6 flex items-center">
         <PurchaseCardActions
           onEdit={onEdit}
           onDelete={onDelete}

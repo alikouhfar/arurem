@@ -25,7 +25,7 @@ export const PurchaseCardActions: FC<PurchaseCardActionsProps> = (props) => {
       <PurchaseModificationSheet mode="edit" onEdit={onEdit} selectedPurchase={selectedPurchase}>
         <button
           onClick={() => onSelectedPurchaseChange(purchase)}
-          className="hover:text-royal-green hover:bg-royal-green/5 cursor-pointer rounded-xl bg-transparent p-2.5 text-slate-300 transition-all"
+          className="hover:text-royal-green hover:bg-royal-green/5 cursor-pointer rounded-lg bg-transparent p-2! text-slate-300 transition-all"
           title="Edit Entry"
         >
           <IconEdit className="size-4.5" />
@@ -35,7 +35,7 @@ export const PurchaseCardActions: FC<PurchaseCardActionsProps> = (props) => {
         <AlertDialogTrigger asChild>
           <button
             title="Remove Entry"
-            className="cursor-pointer rounded-xl bg-transparent p-2.5 text-slate-300 transition-all hover:bg-rose-50 hover:text-rose-500"
+            className="cursor-pointer rounded-lg bg-transparent p-2! text-slate-300 transition-all hover:bg-rose-50 hover:text-rose-500"
           >
             <IconTrash className="size-4.5" />
           </button>

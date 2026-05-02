@@ -23,7 +23,7 @@ export const HeroAnalyticsModal: FC<HeroAnalyticsModalProps> = (props) => {
       </DialogTrigger>
       <DialogContent
         showCloseButton={false}
-        className="border-gold/10 w-full max-w-xl rounded-[4rem] border bg-white p-16 shadow-2xl"
+        className="border-gold/10 w-full max-w-xl! rounded-[4rem] border bg-white p-16 shadow-2xl"
       >
         <DialogHeader className="mb-16 flex-row items-center justify-between">
           <div>
@@ -39,7 +39,7 @@ export const HeroAnalyticsModal: FC<HeroAnalyticsModalProps> = (props) => {
           </DialogClose>
         </DialogHeader>
 
-        <div className="custom-scroll max-h-[50vh] space-y-12 overflow-y-auto pr-8">
+        <div className="custom-scroll max-h-[50vh] space-y-12 overflow-y-auto">
           {(Object.entries(sellerSummary) as [string, number][])
             .sort((a, b) => b[1] - a[1])
             .map(([name, weight]) => (
@@ -50,7 +50,7 @@ export const HeroAnalyticsModal: FC<HeroAnalyticsModalProps> = (props) => {
                   </span>
                   <div className="flex items-baseline gap-1">
                     <span className="font-display text-gold text-2xl font-bold tabular-nums">
-                      {weight.toFixed(1)}
+                      {weight.toFixed(3)}
                     </span>
                     <span className="font-display text-[10px] font-bold tracking-widest text-slate-400 uppercase">
                       G

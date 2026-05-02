@@ -17,15 +17,15 @@ export const Hero: FC<HomeProps> = (props) => {
             <div className="bg-gold/10 border-gold/20 flex h-8 w-8 items-center justify-center rounded-full border">
               <IconShieldCheck className="text-gold-bright h-4 w-4" />
             </div>
-            <span className="font-display text-gold-bright/60 text-xs font-bold tracking-[0.2em] uppercase">
+            <span className="font-display text-gold-bright/60 flex-1 text-xs font-bold tracking-[0.2em] uppercase">
               Aggregate Inventory Weight
             </span>
           </div>
           <div className="flex items-baseline gap-4">
-            <h2 className="font-display text-9xl leading-none font-bold tracking-tighter text-white tabular-nums">
-              {totalWeight.toFixed(1)}
+            <h2 className="font-display text-6xl leading-none font-bold tracking-tighter text-white tabular-nums xl:text-8xl">
+              {totalWeight.toFixed(3)}
             </h2>
-            <span className="font-display text-gold-bright bg-gold/10 border-gold/20 rounded-lg border px-3 py-1 text-xl font-bold tracking-widest uppercase">
+            <span className="font-display text-gold-bright bg-gold/10 border-gold/20 rounded-lg border px-3 py-1 text-sm font-bold tracking-widest uppercase xl:text-xl">
               Grams
             </span>
           </div>

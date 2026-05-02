@@ -30,8 +30,8 @@ export const Header: FC<HeaderProps> = (props) => {
     reader.onload = (event) => {
       try {
         const jsonData = JSON.parse(event.target?.result as string);
-        if (jsonData.purchases && Array.isArray(jsonData.purchases)) {
-          onDataChange(jsonData.purchases);
+        if (jsonData && Array.isArray(jsonData)) {
+          onDataChange(jsonData);
           toast.custom(() => <CustomToast type="success" message="Data imported successfully" />);
         } else {
           toast.custom(() => <CustomToast type="error" message="Invalid backup file" />);
@@ -53,6 +53,7 @@ export const Header: FC<HeaderProps> = (props) => {
         <div>
           <h1 className="font-display text-3xl font-extrabold tracking-tight text-slate-950">
             Gold Vault
+            <span className="ml-1 text-sm font-medium">v{__APP_VERSION__}</span>
           </h1>
           <div className="mt-1 flex items-center gap-2">
             <span className="bg-gold border-gold-bright/30 h-2.5 w-2.5 animate-pulse rounded-full border-2" />

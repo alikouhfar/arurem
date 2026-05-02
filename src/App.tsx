@@ -19,7 +19,7 @@ export const App = () => {
   const [selectedPurchase, setSelectedPurchase] = useState<Purchase | null>(null);
   const { appData, purchaseStats, filteredPurchases, setAppData } = useAppData({ searchQuery });
 
-  const onDataChange = (data: any) => setAppData(data.purchases);
+  const onDataChange = (purchases: Array<Purchase>) => setAppData(purchases);
   const onViewModaChange = (viewMode: ViewMode) => setViewMode(viewMode);
   const onSelectedPurchaseChange = (purchase: Purchase | null) => {
     setSelectedPurchase(purchase);
@@ -51,7 +51,7 @@ export const App = () => {
     <div className="selection:bg-gold/20 selection:text-royal-green min-h-screen bg-slate-50 font-sans text-slate-900">
       <BackgroundDecorativeElements />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 xl:px-0">
         <Header
           appData={appData}
           onCreate={onCreate}

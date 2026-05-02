@@ -53,7 +53,7 @@ export const PurchaseListCard: FC<PurchaseListCardProps> = (props) => {
           <PurchaseWeight weight={purchase.weight} purity={purchase.purity} />
         </div>
 
-        <div className="flex items-center gap-1 border-l border-slate-100 pl-4">
+        <div className="flex items-center border-l border-slate-100 pl-4">
           <PurchaseCardActions
             onEdit={onEdit}
             onDelete={onDelete}
